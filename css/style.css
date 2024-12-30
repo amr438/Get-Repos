@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --black-color :#454545ec ;
+    --black-shadow-color: #3d3d3d;
+    --font-family: 'Noto Naskh Arabic'
+    }
+
+body {
+    font-family: sans-serif;
+}
+
+.parent {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #eee;
+}
+.parent input {
+    display: block;
+    height: 30px;
+    width: 70%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: white;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    transition: .3s;
+    color: var(--black-color);
+    margin-right: 5px;
+}
+.parent input::placeholder {
+    color: var(--black-color);
+}
+.parent input:focus {
+    border: 1px solid var(--blue-color);
+}
+.parent button {
+    position: relative;
+    height: 30px;
+    padding: 17px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    background-color: var(--blue-color);
+    border: 1px solid white;
+    cursor: pointer;
+    z-index: 1;
+    transition: .3s;
+}
+.parent button::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--blue-alt-color);
+    z-index: -1;
+    transition: .3s;
+}
+.parent button:hover::before {
+    width: 100%;
+}
+.data {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.data .box {
+    width: 40%;
+    padding: 10px;
+    background-color: #ddd;
+    margin: 5px;
+    text-align: center;
+}
+@media(max-width:760px) {
+    .data .box {
+        width: 100%;
+    }
+}
+.data .box > div {
+    height: 80%;
+    /* overflow: hidden; */
+    transition: .3s;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    
+}
+.data .box > div span {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.data .box > div iframe {
+    position: absolute;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    height: 300px;
+    scrollbar-width: none;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.data .name {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 98%;
+    border-top: 1px solid #ddd;
+    margin-top: 5px;
+}
+.data i {
+    color: var(--blue-color);
+}
+.data .name span {
+    margin-left: 8px;
+}
+.data .Link {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    flex-grow: 1;
+}
+.data .Link span {
+    color: var(--blue-color);
+    cursor: pointer;
+}
